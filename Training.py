@@ -2,6 +2,10 @@ import torch.optim as optim
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
+from Model import Net
+import torch
+from Dataloader import trainloader, batch_size, classes
+
 
 net = Net()
 
