@@ -1,6 +1,6 @@
 import torch.nn as nn
 import torch.nn.functional as F
-
+import torch.optim as optim
 
 class Net(nn.Module):
     def __init__(self):
@@ -23,3 +23,8 @@ class Net(nn.Module):
 
 
 net = Net()
+
+
+# Use a Classification Cross-Entropy loss and SGD with momentum.
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
